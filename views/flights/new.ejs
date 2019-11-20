@@ -10,16 +10,25 @@
     
     <form action="/flights" method="POST">
     
-        <select name="airline" id="">Airline: 
+        <select name="airport">Airport: 
+            <option value="AUS">Austin, TX</option>
+            <option value="DAL">Dallas, TX</option>
+            <option value="LAX">Los Angeles, CA</option>
+            <option value="SAN">San Diego, CA</option>
+            <option value="SEA">Seattle, WA</option>
+
+        </select>
+
+        <select name="airline">Airline: 
             <option value="American">American</option>
             <option value="Southwest">Southwest</option>
             <option value="United">United</option>
         </select>
         
 
-        <input type="number" name="flightNum">Flight Number: </input>
+        <input type="number" name="flightNum">Flight Number</input>
 
-        <input type="date" name="departs">Departs: </input>
+        <input type="date" name="departs">Departs</input>
 
         <button type="submit">Submit Flight</button>
 
