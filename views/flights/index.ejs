@@ -24,8 +24,8 @@
             <td><%= s.airport %></td>
             <td><%= s.airline %></td>
             <td><%= s.flightNum %></td>
-            <td><%= s.departs.toDateString() %></td>
-            <td><a href="/flights/<%= s._id %>">Details</a></td>
+            <td><%= s.departs %></td>
+            <td><a href="/flights/<%= s._id%>">Details</a></td>
         </tr>
         <% }); %>
     </tbody>

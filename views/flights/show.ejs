@@ -17,7 +17,18 @@
 
     <li>Departure Time :: <%= flights.departs.toDateString() %></li> <br>
 
-    <form action=""></form>
+    <li>New Destination :: </li>
+
+    <% if(flights.destination != 0) { %>
+        <% flights.destination.forEach(function(s) { %>
+            <li><%= s.airport %></li>
+            <li><%= s.arrival.toDateString() %></li>
+        <% }); %>
+    <% }; %>
+
+</ul>
+
+    <form action="/flights/<%=flights._id %>/details" method="POST">
 
     <h3>Add Destination for Flight</h3>
     <select name="airport">
@@ -30,11 +41,13 @@
 
     </select>
 
-    <input type="date" name="arrival">Arrival</input>
-    <button>Submit Arrival</button>
-    
+    <input type="date" name="arrival"></input>
+    <button type='submit'>Submit Arrival</button>
 
-</ul>
+    </form>
+
+    <a href="/tickets/new">Buy Ticket</a>
+
 
 </body>
 </html>
