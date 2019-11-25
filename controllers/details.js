@@ -1,4 +1,5 @@
 const Flight = require('../models/flight');
+const Ticket = require('../models/ticket')
 
 function create(req, res) {
     Flight.findById(req.params.id, function(err, flight) {
